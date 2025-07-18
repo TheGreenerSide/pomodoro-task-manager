@@ -1,6 +1,7 @@
 body {
 background-color: cornflowerblue;
 font-size: 15px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #big-container{
     background-color: whitesmoke;
@@ -25,4 +26,11 @@ button:hover{
     background-color: azure;
     padding:20%;
 
+}
+
+label{
+    font-size: 15px;
+}
+#validation{
+    color:red
 }
