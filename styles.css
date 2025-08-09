@@ -16,15 +16,21 @@ button{
     background-color:cornflowerblue;
     color: white;
     border-color: white;
+    cursor: pointer;
 }
 button:hover{
     color:cornflowerblue;
     background-color: white;
 }
+button.active {
+    color:cornflowerblue;
+    background-color: white;
+}
 #pomodoro-container{
-    margin:5%;
+    margin:40% 5% 0% 5%;
     background-color: azure;
-    padding:20%;
+    padding:15%;
+    display:block;
 
 }
 
@@ -33,4 +39,15 @@ label{
 }
 #validation{
     color:red
+}
+input[name=pro-select]
+{
+    display:none;
+}
+#task-manager{
+    margin:40% 5% 0% 5%;
+    background-color: azure;
+    padding:15%;
+    display:block;
+
 }

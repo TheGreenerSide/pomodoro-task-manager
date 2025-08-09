@@ -2,14 +2,42 @@
 document.getElementById("start").addEventListener("click"  , startWCount);
 document.getElementById("stop").addEventListener("click"  , stopping);
 document.getElementById("pause").addEventListener("click"  , pausing);
+document.getElementById("add-task").addEventListener("click"  , addtask);
 
+document.getElementById("pomodoro").addEventListener("click"  , 
+    function(){
+    openTab("pomodoro-container");
+});
+document.getElementById("task").addEventListener("click"  , 
+    function(){
+    openTab("task-manager");
+});
 
+function openTab(TabName) {
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(TabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 let x;
 let counter=0;
 let ispaused = false;
 let inbreak = false;
-// function inputtype(){
-// document
+// var taskList=[];
+
 function startWCount(){
     if(document.getElementById("work-time").value =="" ||document.getElementById("break-time").value ==""){
         document.getElementById("validation").innerHTML ="make sure to enter both focus and break time";
@@ -83,4 +111,17 @@ function breakcountdown(){
     x=null;
     startWCount();
 }
+}
+
+function addtask()
+{
+    newTask = document.getElementById("task-input").value;
+    var item = document.createElement("li");
+    item.appendChild(document.createTextNode(newTask));
+    document.getElementById("task-list").innerHTML.appendChild(item);
+    
+
+
+
+
 }

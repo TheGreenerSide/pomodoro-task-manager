@@ -9,31 +9,37 @@
 </head>
 <body> 
     <div id="big-container">
-    <button id="pomodoro">Pomodoro</button>
-    <button id="task">Task Manager</button>
-    <div id="pomodoro-container">
-<p id="countdown">
-
-</p>
-<p id="status"></p>
-<p id = "remaining"></p>
-<label for="work-time">work time in minutes</label>
-<input id="work-time">
-<label for="break-time">break time in minutes</label>
-<input id="break-time">
-<p id="validation"></p>
-<button id ="start">start</button>
-<button id ="stop">stop</button>
-<button id ="pause">pause</button>
-
-
-
-    </div>
-    <div id="task-manager">
-<button id="add-task">add the tasks</button>
-        <input id="adding">
-
-    </div>
+<div id="choices-block">
+    <button id="pomodoro" class="tablinks">
+    Pomodoro
+    </button>
+    <button id="task" class="tablinks"
+  
+     >
+    Task Manager
+    </button>
+</div>
+<div id="pomodoro-container" class="tabcontent">
+    <p id="countdown"></p>
+    <p id="status"></p>
+    <p id = "remaining"></p>
+    <label for="work-time">work time in minutes</label>
+    <input id="work-time">
+    <label for="break-time">break time in minutes</label>
+    <input id="break-time">
+    <p id="validation"></p>
+    <button id ="start">start</button>
+    <button id ="stop">stop</button>
+    <button id ="pause">pause</button>
+</div>
+<div id="task-manager" class="tabcontent">
+    <button id="add-task">add the tasks</button>
+    <input id="task-input">
+    <ul id="task-list">
+<li>firstone</li>
+    </ul>
+    <p id="test33"></p>
+</div>
     </div>
 <script src="main.js"></script>
 </body>
